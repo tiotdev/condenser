@@ -236,6 +236,7 @@ export default `
 /anime/@semur/black-clover-episode-48-watch-online-english-subbed
 /anime/@semur/black-clover-episode-62-anime
 /gintama/@iarproduct/gintama-episode-357-english-subbed
+/happy/@janinet/watch-happy-wedding-2018-hdrip-full-telugu-movie-watch-online-free-download-hd-print
 `
     .trim()
     .split('\n');

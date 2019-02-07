@@ -44,7 +44,6 @@ const HIDE_ANNOUNCEMENT = 'user/HIDE_ANNOUNCEMENT';
 const SHOW_ANNOUNCEMENT = 'user/SHOW_ANNOUNCEMENT';
 
 // Saga-related
-export const LOAD_SAVINGS_WITHDRAW = 'user/LOAD_SAVINGS_WITHDRAW';
 export const UPLOAD_IMAGE = 'user/UPLOAD_IMAGE';
 
 const defaultState = fromJS({
@@ -181,7 +180,6 @@ export default function reducer(state = defaultState, action) {
             return state; // saga
 
         case USERNAME_PASSWORD_LOGIN:
-        case LOAD_SAVINGS_WITHDRAW:
             return state; // saga
 
         case SET_USER:
@@ -447,11 +445,6 @@ export const hideConnectionErrorModal = payload => ({
 
 export const set = payload => ({
     type: SET,
-    payload,
-});
-
-export const loadSavingsWithdraw = payload => ({
-    type: LOAD_SAVINGS_WITHDRAW,
     payload,
 });
 

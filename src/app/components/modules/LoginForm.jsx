@@ -104,11 +104,6 @@ class LoginForm extends Component {
         saveLogin.props.onChange(saveLoginDefault); // change UI
     };
 
-    showChangePassword = () => {
-        const { username, password } = this.state;
-        this.props.showChangePassword(username.value, password.value);
-    };
-
     render() {
         if (!process.env.BROWSER) {
             return (
@@ -612,17 +607,6 @@ export default connect(
                 globalActions.showDialog({
                     name: 'qr_reader',
                     params: { handleScan: dataCallback },
-                })
-            );
-        },
-        showChangePassword: (username, defaultPassword) => {
-            dispatch(userActions.closeLogin());
-
-            dispatch(globalActions.remove({ key: 'changePassword' }));
-            dispatch(
-                globalActions.showDialog({
-                    name: 'changePassword',
-                    params: { username, defaultPassword },
                 })
             );
         },
